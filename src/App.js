@@ -6,6 +6,7 @@ import Services from './components/Services';
 import Team from './components/Team';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
+import WhatsAppButton from './components/WhatsAppButton';
 
 function App() {
   const [darkMode, setDarkMode] = useState(true); // Default to dark mode
@@ -45,6 +46,7 @@ function App() {
         <Team />
         <Contact />
         <Footer />
+        <WhatsAppButton />
       </div>
     </div>
   );

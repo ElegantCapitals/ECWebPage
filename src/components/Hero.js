@@ -78,15 +78,15 @@ const Hero = () => {
             }`}
           >
             <div className="text-center">
-              <div className="text-3xl md:text-4xl font-bold text-white mb-2">500+</div>
+              <div className="text-3xl md:text-4xl font-bold text-white mb-2">50+</div>
               <div className="text-gray-200">Projects Completed</div>
             </div>
             <div className="text-center">
-              <div className="text-3xl md:text-4xl font-bold text-white mb-2">15+</div>
+              <div className="text-3xl md:text-4xl font-bold text-white mb-2">5+</div>
               <div className="text-gray-200">Years Experience</div>
             </div>
             <div className="text-center">
-              <div className="text-3xl md:text-4xl font-bold text-white mb-2">98%</div>
+              <div className="text-3xl md:text-4xl font-bold text-white mb-2">100%</div>
               <div className="text-gray-200">Client Satisfaction</div>
             </div>
           </div>

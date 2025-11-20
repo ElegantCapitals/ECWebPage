@@ -54,6 +54,28 @@ const About = () => {
   return (
     <section id="about" className="section-padding bg-navy-800 dark:bg-gray-800">
       <div className="container-max">
+        {/* Logo at top */}
+        <div className="text-center mb-12">
+          <div style={{minHeight: '100px', display: 'flex', alignItems: 'center', justifyContent: 'center'}}>
+            <img 
+              src={`${process.env.PUBLIC_URL}/images/logo/logo.jpeg`}
+              alt="Elegant Capitals Logo" 
+              className="h-20 max-w-xs object-contain"
+              onLoad={() => console.log('Logo loaded successfully')}
+              onError={(e) => {
+                console.error('Logo failed to load from:', e.target.src);
+                e.target.style.display = 'none';
+              }}
+            />
+          </div>
+          <h1 className="text-4xl md:text-5xl font-bold text-white mb-2">
+            Elegant Capitals
+          </h1>
+          <p className="text-gold-400 text-lg font-semibold">
+            (PVT) LTD - Business & Financial Consulting
+          </p>
+        </div>
+
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           {/* Content */}
           <div className={`transition-all duration-1000 ${isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-10'}`}>
@@ -61,7 +83,7 @@ const About = () => {
               About Elegant Capitals
             </h2>
             <p className="text-lg text-gray-200 dark:text-gray-300 mb-6">
-              Founded in 2008, Elegant Capitals (PVT) LTD has been at the forefront of business 
+              Founded in 2024, Elegant Capitals (PVT) LTD has been at the forefront of business 
               and financial consulting, helping organizations navigate complex challenges and 
               achieve sustainable growth.
             </p>
@@ -84,7 +106,7 @@ const About = () => {
           <div className={`transition-all duration-1000 delay-300 ${isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-10'}`}>
             <div className="relative">
               <div className="bg-gradient-to-br from-navy-800 to-gold-500 rounded-lg p-8 text-white">
-                <h3 className="text-2xl font-bold mb-4">15+ Years of Excellence</h3>
+                <h3 className="text-2xl font-bold mb-4">Years of Excellence</h3>
                 <div className="space-y-4">
                   <div className="flex items-center">
                     <div className="w-3 h-3 bg-gold-400 rounded-full mr-3"></div>
@@ -107,10 +129,10 @@ const About = () => {
               
               {/* Floating Elements */}
               <div className="absolute -top-4 -right-4 w-16 h-16 bg-gold-400 rounded-full flex items-center justify-center animate-pulse">
-                <span className="text-navy-800 font-bold text-xl">500+</span>
+                <span className="text-navy-800 font-bold text-xl">50+</span>
               </div>
               <div className="absolute -bottom-4 -left-4 w-12 h-12 bg-navy-600 rounded-full flex items-center justify-center animate-pulse" style={{animationDelay: '1s'}}>
-                <span className="text-white font-bold">98%</span>
+                <span className="text-white font-bold">100%</span>
               </div>
             </div>
           </div>

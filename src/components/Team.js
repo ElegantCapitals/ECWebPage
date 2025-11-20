@@ -26,9 +26,9 @@ const Team = () => {
     {
       name: "Tharushi Boteju",
       position: "CEO & Managing Partner",
-      bio: "BBNS: MI& SC (Victoria University), AAT Passed Finalist, Part Qualified ICASL, DICA(ESOFT)",
+      bio: "BBNS: MI& SC (Victoria University), AAT Passed Finalist, Part Qualified ICASL, DICA(ESOFT)",
       expertise: ["Strategic Planning", "Financial Advisory", "Leadership"],
-      image: "/images/team/tharushie.jpg", // Local image path - add your photo to public/images/team/
+      image: `${process.env.PUBLIC_URL}/images/team/tharushi.jpg`, // Local image path - add your photo to public/images/team/
       social: {
         linkedin: "https://linkedin.com/in/tharushi-boteju",
         instagram: "https://instagram.com/tharushi_boteju",
@@ -36,23 +36,23 @@ const Team = () => {
       }
     },
     {
-      name: "Michael Chen",
-      position: "Senior Financial Advisor",
-      bio: "Michael specializes in financial planning and risk management, helping clients optimize their financial performance and navigate complex market conditions.",
+      name: "Heshan Gajanayake",
+      position: "Director & Managing Partner",
+      bio: "LLB: Bachelor of Laws (UOL), AAT Passed Finalist, Certificate course in Computer Science(NIBM)",
       expertise: ["Financial Planning", "Risk Management", "Investment Analysis"],
-      image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80",
+      image: `${process.env.PUBLIC_URL}/images/team/0C8A6410.JPG`, // Local image path - add your photo to public/images/team/
       social: {
-        linkedin: "https://linkedin.com/in/michael-chen-financial",
-        instagram: "https://instagram.com/michaelchen_finance",
-        email: "michael@elegantcapitals.com"
+        linkedin: "http://www.linkedin.com/in/heshan-gajanayake-a8185338a",
+        instagram: "https://www.instagram.com/heshan_gajanayake/",
+        email: "elegantcapitals.heshan@gmail.com"
       }
     },
     {
-      name: "Emily Rodriguez",
-      position: "Operations Director",
-      bio: "Emily leads our operations optimization practice, helping businesses streamline processes and improve efficiency across all departments.",
+      name: "Hirantha Weerasinghe",
+      position: "Business Development Manager",
+      bio: "BSc in BM Logistics Mgt. (Special),Dip. in Digital Mrkt. (SL)",
       expertise: ["Operations Management", "Process Improvement", "Efficiency Analysis"],
-      image: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80",
+      image: `${process.env.PUBLIC_URL}/images/team/hirantha.jpg`, // Local image path - add your photo to public/images/team/
       social: {
         linkedin: "https://linkedin.com/in/emily-rodriguez-ops",
         instagram: "https://instagram.com/emilyrodriguez_ops",
@@ -60,41 +60,18 @@ const Team = () => {
       }
     },
     {
-      name: "David Thompson",
-      position: "Business Strategy Consultant",
-      bio: "David brings extensive experience in market analysis and strategic planning, helping businesses identify opportunities and develop winning strategies.",
-      expertise: ["Market Analysis", "Strategic Planning", "Competitive Intelligence"],
-      image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=687&q=80",
+      name: "Rusira Sandul",
+      position: "Brand Visibility Manager",
+      bio: "Bsc(Hons) Computer Science (University of Westminster UK), Bsc Physical Science (University of Sri Jayewardenepura)",
+      expertise: ["Web Development", "Backend Development", "Full Stack Development" ,"Degital Marketing"],
+      image: `${process.env.PUBLIC_URL}/images/team/rusira.jpg`, // Local image path - add your photo to public/images/team/
       social: {
         linkedin: "https://linkedin.com/in/david-thompson-strategy",
         instagram: "https://instagram.com/davidthompson_strategy",
         email: "david@elegantcapitals.com"
       }
     },
-    {
-      name: "Lisa Park",
-      position: "Risk Management Specialist",
-      bio: "Lisa specializes in identifying and mitigating business risks, ensuring our clients are well-prepared for any challenges they may face.",
-      expertise: ["Risk Assessment", "Compliance", "Crisis Management"],
-      image: "https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1171&q=80",
-      social: {
-        linkedin: "https://linkedin.com/in/lisa-park-risk",
-        instagram: "https://instagram.com/lisapark_risk",
-        email: "lisa@elegantcapitals.com"
-      }
-    },
-    {
-      name: "James Wilson",
-      position: "Technology Integration Lead",
-      bio: "James helps businesses leverage technology to improve operations and drive innovation, ensuring they stay competitive in the digital age.",
-      expertise: ["Digital Transformation", "Technology Strategy", "Innovation"],
-      image: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=687&q=80",
-      social: {
-        linkedin: "https://linkedin.com/in/james-wilson-tech",
-        instagram: "https://instagram.com/jameswilson_tech",
-        email: "james@elegantcapitals.com"
-      }
-    }
+    
   ];
 
   return (
@@ -130,13 +107,15 @@ const Team = () => {
               style={{transitionDelay: `${index * 100}ms`}}
             >
               {/* Image */}
-              <div className="relative h-64 overflow-hidden">
+              <div className="relative h-96 overflow-hidden bg-gray-200 dark:bg-gray-600">
                 <img 
                   src={member.image} 
                   alt={member.name}
-                  className="w-full h-full object-cover transition-transform duration-300 hover:scale-105"
+                  className="w-full h-full object-cover transition-transform duration-300 hover:scale-110"
+                  loading="lazy"
+                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-navy-800/50 to-transparent"></div>
+                <div className="absolute inset-0 bg-gradient-to-t from-navy-900/60 to-transparent"></div>
               </div>
 
               {/* Content */}

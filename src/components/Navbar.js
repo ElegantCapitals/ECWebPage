@@ -41,11 +41,17 @@ const Navbar = ({ darkMode, toggleDarkMode }) => {
         <div className="flex items-center justify-between h-16 px-4 sm:px-6 lg:px-8">
           {/* Logo */}
           <div className="flex-shrink-0">
-            <div className="flex items-center">
-              <div className="w-8 h-8 bg-gradient-to-r from-navy-800 to-gold-500 rounded-lg flex items-center justify-center">
-                <span className="text-white font-bold text-sm">EC</span>
-              </div>
-              <span className="ml-2 text-xl font-bold text-white">
+            <div className="flex items-center space-x-2">
+              <img 
+                src={`${process.env.PUBLIC_URL}/images/logo/logo.jpeg`}
+                alt="Elegant Capitals Logo" 
+                className="h-12 w-auto object-contain"
+                onError={(e) => {
+                  e.target.style.display = 'none';
+                  e.target.parentElement.innerHTML = '<div class="w-10 h-10 bg-gradient-to-r from-navy-800 to-gold-500 rounded-lg flex items-center justify-center"><span class="text-white font-bold text-sm">EC</span></div>';
+                }}
+              />
+              <span className="text-xl font-bold text-white hidden sm:inline">
                 Elegant Capitals
               </span>
             </div>
